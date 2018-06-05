@@ -1,0 +1,471 @@
+2018-06-03 15:49:49 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: TencentSpider)
+2018-06-03 15:49:49 [scrapy.utils.log] INFO: Versions: lxml 3.6.4.0, libxml2 2.9.4, cssselect 1.0.1, parsel 1.4.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 16.0.0 (OpenSSL 1.0.2j  26 Sep 2016), cryptography 1.5, Platform Windows-10-10.0.16299-SP0
+2018-06-03 15:49:49 [scrapy.crawler] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'NEWSPIDER_MODULE': 'TencentSpider.spiders', 'BOT_NAME': 'TencentSpider', 'SPIDER_MODULES': ['TencentSpider.spiders'], 'LOG_LEVEL': 'INFO', 'LOG_FILE': 'tencentspider_log.log'}
+2018-06-03 15:49:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats']
+2018-06-03 15:49:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-06-03 15:49:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-06-03 15:49:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['TencentSpider.pipelines.TencentspiderPipeline']
+2018-06-03 15:49:49 [scrapy.core.engine] INFO: Spider opened
+2018-06-03 15:49:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-06-03 15:49:53 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:54 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "hr.tencent.com"; 'join.qq.com'!='hr.tencent.com'
+2018-06-03 15:49:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3770#a> (referer: https://hr.tencent.com/position.php?&start=3790)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:49:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3680#a> (referer: https://hr.tencent.com/position.php?&start=3720)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:49:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3700#a> (referer: https://hr.tencent.com/position.php?&start=3720)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:49:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3650#a> (referer: https://hr.tencent.com/position.php?&start=3690)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:49:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3620#a> (referer: https://hr.tencent.com/position.php?&start=3660)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:49:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3590#a> (referer: https://hr.tencent.com/position.php?&start=3630)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3420#a> (referer: https://hr.tencent.com/position.php?&start=3450)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=3020#a> (referer: https://hr.tencent.com/position.php?&start=3060)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:05 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2950#a> (referer: https://hr.tencent.com/position.php?&start=2980)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=910#a> (referer: https://hr.tencent.com/position.php?&start=880)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=950#a> (referer: https://hr.tencent.com/position.php?&start=920)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=940#a> (referer: https://hr.tencent.com/position.php?&start=920)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=930#a> (referer: https://hr.tencent.com/position.php?&start=900)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2630#a> (referer: https://hr.tencent.com/position.php?&start=2670)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2380#a> (referer: https://hr.tencent.com/position.php?&start=2420)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:12 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2370#a> (referer: https://hr.tencent.com/position.php?&start=2400)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2230#a> (referer: https://hr.tencent.com/position.php?&start=2250)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2030#a> (referer: https://hr.tencent.com/position.php?&start=2070)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=2010#a> (referer: https://hr.tencent.com/position.php?&start=2050)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1820#a> (referer: https://hr.tencent.com/position.php?&start=1860)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1760#a> (referer: https://hr.tencent.com/position.php?&start=1800)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1590#a> (referer: https://hr.tencent.com/position.php?&start=1630)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:21 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1510#a> (referer: https://hr.tencent.com/position.php?&start=1550)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:22 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1400#a> (referer: https://hr.tencent.com/position.php?&start=1440)
+Traceback (most recent call last):
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\a2\annaconda2\lib\site-packages\scrapy\spiders\crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "C:\Users\lxy\Documents\GitHub\机器学习代码\python学习\python爬虫\scrapy\TencentSpider\TencentSpider\spiders\tencent.py", line 26, in parse_item
+    item['position_type'] = each.xpath("./td[2]/text()").extract()[0]
+IndexError: list index out of range
+2018-06-03 15:50:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-06-03 15:50:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 134015,
+ 'downloader/request_count': 395,
+ 'downloader/request_method_count/GET': 395,
+ 'downloader/response_bytes': 1539341,
+ 'downloader/response_count': 395,
+ 'downloader/response_status_count/200': 393,
+ 'downloader/response_status_count/301': 2,
+ 'dupefilter/filtered': 2549,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 6, 3, 7, 50, 26, 881182),
+ 'item_scraped_count': 3789,
+ 'log_count/ERROR': 24,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 8,
+ 'request_depth_max': 81,
+ 'response_received_count': 393,
+ 'scheduler/dequeued': 393,
+ 'scheduler/dequeued/memory': 393,
+ 'scheduler/enqueued': 393,
+ 'scheduler/enqueued/memory': 393,
+ 'spider_exceptions/IndexError': 24,
+ 'start_time': datetime.datetime(2018, 6, 3, 7, 49, 49, 756635)}
+2018-06-03 15:50:26 [scrapy.core.engine] INFO: Spider closed (finished)
