@@ -21,10 +21,12 @@ DEFAULT_REQUEST_HEADERS = {
     'Accept-Language': 'en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4',
 }
 
+
+
 #   定义保存日志信息的文件名
-LOG_FILE = "movie_top250.log"
+#LOG_FILE = "movie_top250.log"
 #   保存日志等级，低于此等级的信息都被保存
-LOG_LEVEL = "DEBUG"
+#LOG_LEVEL = "DEBUG"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'douban_top250 (+http://www.yourdomain.com)'
 
@@ -75,7 +77,8 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'douban_top250.pipelines.DoubanTop250Pipeline': 300,
+   'douban_top250.pipelines.DoubanTop250Pipeline': 30,
+   'douban_top250.pipelines.DBPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -20,7 +20,7 @@ class DoubanmovieSpider(scrapy.Spider):
             item['star'] = each.xpath(".//div[@class='star']/span[@class='rating_num']/text()").extract()[0]
             # 信息
             item['info'] = each.xpath(".//div[@class='bd']/p/text()").extract()[0].replace('\n', '').strip(' ')
-            #   部分电影没有简介，例如《小萝莉的猴神大叔》，需要做一个判断
+            #
             # 简介
             try:
                 item['intro'] = each.xpath(".//div[@class='bd']/p[@class='quote']/span/text()").extract()[0]
